@@ -45,7 +45,7 @@ export class TagListComponent implements OnInit {
     // find out all the unique types:
     const types = new Set(data.map(x => x.type));
 
-    // produce a list of types with its posts:
+    // produce a list of types with its tags:
     const result = Array.from(types).map(type => ({
       type: type,
       tags: data.filter(tag => tag.type === type)
