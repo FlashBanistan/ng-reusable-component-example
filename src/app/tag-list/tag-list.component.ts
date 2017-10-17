@@ -46,9 +46,9 @@ export class TagListComponent implements OnInit {
     const types = new Set(data.map(x => x.type));
 
     // produce a list of types with its posts:
-    const result = Array.from(types).map(x => ({
-      type: x,
-      tags: data.filter(tag => tag.type === x)
+    const result = Array.from(types).map(type => ({
+      type: type,
+      tags: data.filter(tag => tag.type === type)
     }));
 
     return result;
